@@ -8,7 +8,7 @@
     <div>
          <Header logo = "/img/Header.Logo.png" />
          <Banner check = "/img/check-check.png" />
-         <About heart = "/img/heart-handshake.png" world="/img/globe-2.png" smile="/img/smile-plus.png" users="/img/"      />
+         <About heart = "/img/heart-handshake.png" world="/img/globe-2.png" smile="/img/smile-plus.png" users="/img/users.png"      />
     </div>
 
 </template>
