@@ -1,0 +1,1 @@
+<!-- componente da pagina com corações -->np
