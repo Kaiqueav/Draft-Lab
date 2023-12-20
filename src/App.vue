@@ -3,6 +3,7 @@
     import Banner from './components/Banner.vue'
     import About from './components/About.vue'
     import Work from './components/Work.vue'
+    import Faqs from './components/Faqs.vue'
     
 </script>
 
@@ -12,6 +13,7 @@
          <Banner check = "/img/check-check.png" />
          <About heart = "/img/heart-handshake.png" world="/img/globe-2.png" smile="/img/smile-plus.png" users="/img/users.png"/>
          <Work />
+         <Faqs />
     </div>
 
 </template>
