@@ -34,7 +34,7 @@
             <Content></Content>
          </Faqs> 
     </div>
-   <Footer logo-footer="/img/FooterLogo.png"  github="/img/github.png" />
+   <Footer logoFooter = "/img/FooterLogo.png"  github="/img/github.png" />
    
 </template>
 
