@@ -69,7 +69,7 @@
                      </p>
                 </div>
             </div>
-            <button class="text-[#760EC8] ml-3.5 mt-3.5 mb-7"> Saiba mais</button>
+            <button class="text-[#760EC8] hover:text-white ml-3.5 mt-3.5 mb-7"> Saiba mais</button>
     </div>
 
 </template>

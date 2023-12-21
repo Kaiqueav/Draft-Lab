@@ -6,13 +6,13 @@
     import Work from './components/Work.vue'
     import Faqs from './components/accordion/Faqs.vue'
     import Content from './components/accordion/Content.vue'
-   
+    import Footer from './components/Footer.vue'
     
 </script>
 
 <template>
     <header>
-        <Header logo = "/img/Header.Logo.png" />
+        <Header logo = "/img/Logo.png" />
         <Banner check = "/img/check-check.png" />
     </header>
     <div>
@@ -34,7 +34,8 @@
             <Content></Content>
          </Faqs> 
     </div>
-
+   <Footer logo-footer="/img/FooterLogo.png"  github="/img/github.png" />
+   
 </template>
 
 <style scoped>
