@@ -1,28 +1,35 @@
 <script setup>
-    const items = [
-        {
-            id: 1,
-            title: 'item 1',
-            content: 'contudpdood'
-        }
-    ]
-    const toggle = (item) =>{
-        item.isOpen = !item.isOpen;
-    };
+import { ref } from 'vue';
+const props = defineProps({
+    title: { type: String, required: true },
+    ariaTitle: { type: String, required: true }
+});
+const showPanel = ref(false);
+const togglePanel = (event) => {
+    showPanel.value = !showPanel.value;
+}
 </script>
 
 <template>
-    <div class="panel bg-black p-3">
-        <h1 class="text-white mt-4 ml-4 text-2xl font-bold"> Perguntas Frequentes</h1>
-        <div v-for="item in items" :key="item.id" class="text-white border-[3px] border-[#760EC8] p-2.5 mt-3.5 rounded-md">
-            <figure @click="toggle(item)">{{ item.title }}</figure>
-            <div :class="{'is-open': 'item.isOpen'}">
-                {{ item.content }}
+    <div class="bg-black p-2">
+      <h1 class="text-white ml-4 mt-4 text-lg font-bold ">  Perguntas Frequentes </h1>
+        <div class="panel container mb-4 mt-4 border-2 border-[#760EC866]  active:border-[#760EC8] rounded-lg   text-white">
+            <button :arial-controls="'accordion-content-' + ariaTitle" :id="'accordion-control-' + ariaTitle"
+                @click.prevent="togglePanel"
+                class="p-4 w-full font-semibold flex flex-row items-center justify-between">
+                {{ title }}
+                <span class="material-icons" v-if="showPanel">
+                    expand_more
+                </span>
+                <span class="material-icons" v-else>
+                    chevron_right
+                </span>
+            </button>
+            <div :aria-hidden="!showPanel" :id="'content-' + ariaTitle" class="p-4" v-if="showPanel">
+                <slot></slot>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
